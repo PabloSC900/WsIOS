@@ -1,0 +1,169 @@
+/*Ejercicio de clases o estructura
+
+Implementar las siguientes clases o estructuras y sus relaciones (diseño del modelo):
+
+Queremos formar un ordenador, el ordenador tendrá los siguientes propiedades:
+	1) precio
+	2) nombre del equipo
+ 	3) Varios modulos de memoria ram, la ram tendrá las siguientes propiedades
+			a) capacidad de almacenamiento
+			b) fabricante
+			c) si tiene RGB
+	4) Tendremos un procesador, el procesador tendrá las siguientes propiedades
+			a) velocidad del procesador
+			b) numero de cores
+			c) numero de hilos
+			d) fabricante
+	5) podremos tener varios unidades de almacenamiento, tendrán las siguientes propiedades
+			a) capacidad de almacenamiento
+			b) fabricante
+			c) tipo de unidad (HD, SSD, Nvme)
+	6) Tendrá una tarjeta grafica, con las siguientes propiedades
+			a) ram
+			b) consumo
+			c) Cuda cores
+			d) velocidad
+
+Tareas:
+1) implementar el sistema de clases o de estructuras (o mezcla)
+2) Instanciar un ordenador completo con todos sus objetos con información.
+*/
+
+/*
+class MemoriaRAM {
+  var capAlmacen : Int? 
+  var fabricante : String? 
+  var rgb : Bool? 
+}
+
+
+class Procesador {
+  var velocProc : Double?
+  var numCores : Int?
+  var numHilos: Int?
+  var fabricante : String?  
+}
+
+
+class UnidadAlmacenam {
+  var capAlmacen : Int?
+  var fabricante : String?
+  var tipoUnidad : String?
+}
+
+
+class TarjetaGrafica {
+  var ram : Int?
+  var consumo : Int?
+  var cudaCores : Int?
+  var velocidad : Int?
+}
+
+
+class Ordenador {
+  var precio : Double?
+  var nombreEquipo : String?
+  var modulosRAM : MemoriaRAM?
+  var procesador : Procesador?
+  var unidadesAlmac: UnidadAlmacenam?  
+  var tarjetaGraf : TarjetaGrafica?   
+}
+
+
+var miOrdenador = Ordenador()
+
+miOrdenador.precio = 1500
+miOrdenador.nombreEquipo = "Hp Pavilion"
+
+miOrdenador.modulosRAM.capAlmacen = 4
+miOrdenador.modulosRAM.fabricante = "Hp"
+miOrdenador.modulosRAM.rgb = true
+
+miOrdenador.procesador.velocProc = 1.30
+miOrdenador.procesador.numCores = 2
+miOrdenador.procesador.numHilos = 4
+miOrdenador.procesador.fabricante = "Intel"
+
+miOrdenador.unidadesAlmac.capAlmacen = 256
+miOrdenador.unidadesAlmac.fabricante = "AMD"
+miOrdenador.unidadesAlmac.tipoUnidad = SSD
+
+miOrdenador.tarjetaGraf.ram = 2
+miOrdenador.tarjetaGraf.consumo = 1000
+miOrdenador.tarjetaGraf.cudaCores = 3
+miOrdenador.tarjetaGraf.velocidad = 4000
+
+dump(miOrdenador)
+
+*/
+
+class MemoriaRAM {
+  var capAlmacen : Int = 0
+  var fabricante : String = ""
+  var rgb : Bool = false
+}
+
+
+class Procesador {
+  var velocProc : Double = 0
+  var numCores : Int = 0
+  var numHilos: Int = 0
+  var fabricante : String = ""  
+}
+
+
+class UnidadAlmacenam {
+  var capAlmacen : Int = 0
+  var fabricante : String = "" 
+  var tipoUnidad : String = "" 
+}
+
+
+class TarjetaGrafica {
+  var ram : Int = 0
+  var consumo : Int = 0
+  var cudaCores : Int = 0
+  var velocidad : Int = 0
+}
+
+
+class Ordenador {
+  var precio : Double = 0
+  var nombreEquipo : String = "" 
+  var modulosRAM : MemoriaRAM = MemoriaRAM()
+  var procesador : Procesador = Procesador()
+  var unidadesAlmac: UnidadAlmacenam = UnidadAlmacenam()
+  var tarjetaGraf : TarjetaGrafica = TarjetaGrafica()
+}
+
+
+var miOrdenador = Ordenador()
+
+miOrdenador.precio = 1500
+miOrdenador.nombreEquipo = "Hp Pavilion"
+
+miOrdenador.modulosRAM.capAlmacen = 4
+miOrdenador.modulosRAM.fabricante = "Hp"
+miOrdenador.modulosRAM.rgb = true
+
+miOrdenador.procesador.velocProc = 1.30
+miOrdenador.procesador.numCores = 2
+miOrdenador.procesador.numHilos = 4
+miOrdenador.procesador.fabricante = "Intel"
+
+miOrdenador.unidadesAlmac.capAlmacen = 256
+miOrdenador.unidadesAlmac.fabricante = "AMD"
+miOrdenador.unidadesAlmac.tipoUnidad = "SSD"
+
+miOrdenador.tarjetaGraf.ram = 2
+miOrdenador.tarjetaGraf.consumo = 1000
+miOrdenador.tarjetaGraf.cudaCores = 3
+miOrdenador.tarjetaGraf.velocidad = 4000
+
+dump(miOrdenador)
+
+
+
+
+
+   
